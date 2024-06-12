@@ -26,10 +26,22 @@ class Program
         // } while (userAge2 <0 || userAge2 > 120); 
 
 
-        for (int i = 0; i<100; i++) //first set creates varible, second will continue to run the for loop as long as it remains true, third will add 1 at the end of every itteration. 
-        Console.WriteLine(""+i);
+        // for (int i = 0; i<100; i++) //first set creates varible, second will continue to run the for loop as long as it remains true, third will add 1 at the end of every itteration. 
+        // Console.WriteLine(""+i);
 
-    
+        // List <int> myNumbers = new List <int> (1,2,3,4,5,6,7,8,);
+        // List <string> myNames = new List<string> ();
+        // myNames.Add("Bob");
+        // myNames.Add("Billybob");
+        // myNames.Add ("Betty");
+
+        // // myNumbers.Add(12);
+
+
+        // foreach(string name in myNames)
+        // {
+        //     Console.WriteLine(""+name);
+        // }    
     
     }
 }
