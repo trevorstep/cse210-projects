@@ -1,9 +1,23 @@
 using System;
+using System.Formats.Asn1;
 
 class Program
 {
+
+    static double CalculateCircleArea ( double radius)
+    {
+       double area =0;
+       area = Math.PI * radius *radius;
+        return area;
+    }
+
+
+
+
     static void Main(string[] args)
     {
+        double area = CalculateCircleArea (10);
+        Console.WriteLine(area);
         // Console.WriteLine("Hello Sandbox World!");
         // Console.WriteLine ("Bababooie.");
         // for (int j =0; j < 10; j++ )
