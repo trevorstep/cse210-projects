@@ -15,9 +15,14 @@ class Program
 
 
     static void Main(string[] args)
-    {
+    {        
         double area = CalculateCircleArea (10);
-        Console.WriteLine(area);
+        Console.WriteLine($"F3: The circle's area is: {area.ToString("F3")}");
+
+
+
+
+
         // Console.WriteLine("Hello Sandbox World!");
         // Console.WriteLine ("Bababooie.");
         // for (int j =0; j < 10; j++ )
