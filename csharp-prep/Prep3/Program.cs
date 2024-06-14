@@ -23,7 +23,8 @@ class Program
             if (response == number)
             {
                 Console.WriteLine("You got it!");
-                Console.WriteLine($"You guessed{UserGuess}");
+                Console. WriteLine (" ");
+                Console.WriteLine($"You guessed {UserGuess} times!!");
             }
             else if (response < number)
             {
