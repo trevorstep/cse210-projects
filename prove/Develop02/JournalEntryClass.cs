@@ -6,7 +6,8 @@ class JournalEntry
     public string _prompt;
     public string _response;
 
-
+        DateTime currentDateTime = DateTime.Now;
+        _date == currentDateTime;
 
     public void JournalEntrys()
     {

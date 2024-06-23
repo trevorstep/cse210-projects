@@ -6,8 +6,7 @@ class Program
     static void Main(string[] args)
     {
 
-
-          Random randomGenerator = new Random();
+        Random randomGenerator = new Random();
         int number = 5;
         int response;
         Console.WriteLine(number);
@@ -36,7 +35,7 @@ class Program
             }
             else if (response == 4)
             {
-                
+
             }
 
         } while (response != number);
