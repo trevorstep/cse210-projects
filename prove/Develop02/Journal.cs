@@ -74,6 +74,9 @@ class Journal
     }
 
 
+// This method was created by Chat GPT, Since I don't know a whole lot about file reading within a C# program and we didn't learn about it in class. I will now tell you what it does.
+
+// This Method starts by checking to see if the File exsists on the computer if it does then it will proceed, if it dosent then it will say that the file is not found and continue itterating through the menu. Next it will read the lines on the text file one at a time and split the statements apart using the # sign. Finnaly it calls the journal entry class.
     public void ReadFromFile(string filename )
     {
         if (File.Exists(filename))
