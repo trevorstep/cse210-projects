@@ -4,7 +4,7 @@ class JournalEntry
     public string _prompt;
     public string _response;
 
-    public JournalEntry(string date, string prompt, string response)
+    public JournalEntry (string date, string prompt, string response)
     {
         _date = date;
         _prompt = prompt;
