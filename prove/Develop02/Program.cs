@@ -43,6 +43,5 @@ class Program
             }
 
         } while (response != number);
-
     }
 }
