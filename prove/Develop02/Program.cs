@@ -22,12 +22,14 @@ class Program
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
+            Console.WriteLine ("5. Quit");
+
             string responseAsStrng = Console.ReadLine();
             response = int.Parse(responseAsStrng);
 
             if (response == 1)
             {
-                
+
             }
             else if ( response == 2 )
             {
