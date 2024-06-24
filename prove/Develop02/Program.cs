@@ -1,19 +1,13 @@
 using System;
-using System.Globalization;
 
 class Program
 {
-
-
     
     static void Main(string[] args)
     {
-        
-
-        Random randomGenerator = new Random();
+      Journal journal = new Journal();
         int number = 5;
         int response;
-        Console.WriteLine(number);
 
         do
         {
@@ -29,19 +23,23 @@ class Program
 
             if (response == 1)
             {
-
+                journal.AddEntry();
             }
             else if ( response == 2 )
             {
-
+                journal.Display();
             }
             else if (response == 3)
             {
-
+                Console.Write ("Enter filename to save to: ");
+                string filename = Console.ReadLine();
+                journal.WriteToFile(filename);
             }
             else if (response == 4)
             {
-
+                Console.Write ("Enter filename to load from: ");
+                string loadFile = Console.ReadLine();
+                journal.ReadFromFile(loadFile);
             }
 
         } while (response != number);
