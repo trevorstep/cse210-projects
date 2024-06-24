@@ -1,23 +1,23 @@
-// C#
-
 class JournalEntry
 {
     public string _date;
     public string _prompt;
     public string _response;
 
-        DateTime currentDateTime = DateTime.Now;
-        _date == currentDateTime;
+    public string filename = "Journal.txt";
 
-    public void JournalEntrys()
+    public JournalEntry(string date, string prompt, string response)
     {
+        _date = date;
+        _prompt = prompt;
+        _response = response;
 
     }
 
     public override string ToString()
     {
         string outputString = "";
-        outputString = $"{_date}#{_entryQuestion}#{_journalEntry}";
+        outputString = $"{_date}#{_prompt}#{_response}";
         return outputString;
     }
 
