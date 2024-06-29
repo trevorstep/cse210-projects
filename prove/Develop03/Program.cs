@@ -30,16 +30,20 @@ class Program
 
             else if ( response == 2 )
             {
-
+                    Reference reference = new Reference("Philippians",4, 13);
+                    Console.WriteLine (reference.ToString());
             }
 
             else if (response == 3)
             {
+                    Reference reference = new Reference("Psalm",23, 1);
+                    Console.WriteLine (reference.ToString());
 
             }
             else if (response == 4)
             {
-
+                    Reference reference = new Reference("Alma",7, 11,13);
+                    Console.WriteLine (reference.ToString());
             }
 
         } while (response != number);
