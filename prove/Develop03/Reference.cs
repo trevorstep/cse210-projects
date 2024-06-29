@@ -37,6 +37,6 @@ class Reference
     {
         return $"{Book} {Chapter}:{VerseStart}-{VerseEnd}";
     }
-    // Chatgpt wrote the method,for public override string ToString() One thing im still trying to understand is why it prefers this method over just using your average method otherwise I understand this code.
+    // Chatgpt wrote the method,for public override string ToString() One thing im still trying to understand is why it prefers the ToString method over just using your average method otherwise I understand this code.
 }
 }
