@@ -4,22 +4,22 @@ class Reference
     private int Chapter { get; set; }
     private int VerseStart { get; set; }
     private int VerseEnd { get; set; }
-    
+
     public Reference()
     {
 
     }
 
-    public Reference (string book, int chapter, int verse)
+    public Reference(string book, int chapter, int verse)
     {
         Book = book;
         Chapter = chapter;
         VerseStart = verse;
-        VerseEnd = verse;  
+        VerseEnd = verse;
 
     }
 
-    public Reference (string book, int chapter, int verse1, int verse2End)
+    public Reference(string book, int chapter, int verse1, int verse2End)
     {
         Book = book;
         Chapter = chapter;
@@ -28,15 +28,15 @@ class Reference
     }
 
     public override string ToString()
-{
-    if (VerseStart == VerseEnd)
     {
-        return $"{Book} {Chapter}:{VerseStart}";
+        if (VerseStart == VerseEnd)
+        {
+            return $"{Book} {Chapter}:{VerseStart}";
+        }
+        else
+        {
+            return $"{Book} {Chapter}:{VerseStart}-{VerseEnd}";
+        }
+
     }
-    else
-    {
-        return $"{Book} {Chapter}:{VerseStart}-{VerseEnd}";
-    }
-    // Chatgpt wrote the method,for public override string ToString() One thing im still trying to understand is why it prefers the ToString method over just using your average method otherwise I understand this code.
-}
 }
