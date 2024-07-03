@@ -19,7 +19,8 @@ class Menu
             }
             catch
             {
-                Console.WriteLine("That is an invalid response, please enter a number between 1 and 5.");
+                Console.WriteLine("That is an invalid response, please enter a number between 1 and 4.");
+                Thread.Sleep(3000);
             }
 
         }
