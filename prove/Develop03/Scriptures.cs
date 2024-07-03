@@ -1,28 +1,80 @@
 class Scripture
 {
+    private Reference _reference;
+    private List<Word> _scriptureText;
+
 
     public Scripture()
     {
 
     }
 
-    public Scripture(string reference, string scriputre)
+    public Scripture(Reference reference, string scripture)
     {
-        string References = reference;
-        string Scriptures = scriputre;
+        _scriptureText = new List<Word>();
+        _reference = reference;
+        foreach (string w in scripture.Split(" "))
+        {
+            Word tempWord = new Word(w);
+            _scriptureText.Add(tempWord);
+        }
     }
 
-    public Scripture (string reference, string scripture, int x)
+    public void DisplayScripture()
     {
-        return $"{reference}: {scripture}";
+        Console.WriteLine(_reference.ToString());
+        foreach (Word w in _scriptureText)
+        {
+            Console.Write(w.GetWord());
+            Console.Write(" ");
+        }
+    }
+    public void HideWords()
+    {
+        Random random = new Random();
+        int hiddenCount = 0;
+
+        // Count the number of non-hidden words remaining
+        int nonHiddenWords = _scriptureText.Count(word => !word.IsHidden());
+
+        // If there are fewer than 3 non-hidden words left, hide them all
+        if (nonHiddenWords <= 3)
+        {
+            foreach (var word in _scriptureText)
+            {
+                if (!word.IsHidden())
+                {
+                    word.HideWord(true);
+                    hiddenCount++;
+                }
+            }
+        }
+        else
+        {
+            while (hiddenCount < 3)
+            {
+                int index = random.Next(0, _scriptureText.Count);
+
+                if (!_scriptureText[index].IsHidden())
+                {
+                    _scriptureText[index].HideWord(true);
+                    hiddenCount++;
+                }
+            }
+        }
     }
 
 
-    public static List<string> scriptureList;
-
-    public Scripture(List<string> scriptures)
+    public bool EverythinHidden()
     {
-        scriptureList = scriptures;
+        foreach (Word w in _scriptureText)
+        {
+            if (!w.IsHidden())
+            {
+                return false;
+            }
+        }
+        return true;
     }
-    // ChatGPT wrote assisted in passing the List value in as a parameter. Lists are still slightly confusing to me but im getting there.
+
 }
