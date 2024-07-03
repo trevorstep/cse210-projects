@@ -49,6 +49,7 @@ class Scripture
                 }
             }
         }
+        // ChatGPT helped me with this section
         else
         {
             while (hiddenCount < 3)
