@@ -12,6 +12,8 @@ class Program
             if (response == 1)
             {
                 // Call breathing actvity
+                Activity activity = new Activity();
+                activity.Displayspinner();
 
             }
             else if (response == 2)
