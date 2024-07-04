@@ -10,6 +10,11 @@ public void DisplayWelcomeMessage (string typeOfActvity)
     Console.WriteLine ($"Welcome to the {typeOfActvity} Actvity!");
 } 
 
+public void DisplayExitMessage (string typeOfActvity)
+{
+    Console.WriteLine ($"Thank you for doing the {typeOfActvity} Actvity!");
+}
+
 public void GetDuration()
 {
     Console.WriteLine ("How long in seconds, would you like for your session to take?");
