@@ -1,15 +1,19 @@
 class Activity
 {
- private int time= 0;
+ private int _time= 0;
+ private string typeOfActvity = "";
+ private string _description ="";
+ private DateTime _endTime;
+ 
 public void DisplayWelcomeMessage (string typeOfActvity)
 {
     Console.WriteLine ($"Welcome to the {typeOfActvity} Actvity!");
 } 
 
-public void HowLongToRunProgram()
+public void GetDuration()
 {
     Console.WriteLine ("How long in seconds, would you like for your session to take?");
-    time  = int.Parse(Console.ReadLine());
+    _time  = int.Parse(Console.ReadLine());
 }
 
 
