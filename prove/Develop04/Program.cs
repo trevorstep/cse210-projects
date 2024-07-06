@@ -12,8 +12,14 @@ class Program
             if (response == 1)
             {
                 // Call breathing actvity
-                Activity activity = new Activity();
-                activity.DisplaySpinner();
+                Breathing BreathingActivity = new Breathing();
+                BreathingActivity.DisplayWelcomeMessage("Breathing");
+                Console.WriteLine("");
+                BreathingActivity.GetDescription("This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
+                Console.WriteLine("");
+                BreathingActivity.GetDuration();
+                BreathingActivity.DisplaySpinner();
+
             }
             else if (response == 2)
             {

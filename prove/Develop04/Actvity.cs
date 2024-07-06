@@ -3,13 +3,14 @@ using System.ComponentModel.DataAnnotations;
 class Activity
 {
     private int _time = 3;
-    private string typeOfActvity = "";
+    private int _timeForSpinner = 4;
+    private string _typeOfActvity = "";
     private string _description = "";
 
 
-    public void DisplayWelcomeMessage(string typeOfActvity)
+    public void DisplayWelcomeMessage(string _typeOfActvity)
     {
-        Console.WriteLine($"Welcome to the {typeOfActvity} Actvity!");
+        Console.WriteLine($"Welcome to the {_typeOfActvity} Actvity!");
     }
 
     public void GetDescription(string _description)
@@ -19,11 +20,11 @@ class Activity
 
     public void CountDown()
     {
-        for (int i =5; i>0; i--)
+        for (int i = 5; i > 0; i--)
         {
             Console.Write(i);
             Thread.Sleep(1000);
-            Console.Write ("\b \b");
+            Console.Write("\b \b");
         }
     }
     public void DisplayExitMessage(string typeOfActvity)
@@ -47,8 +48,8 @@ class Activity
             Console.WriteLine("Get ready...");
             Console.WriteLine();
 
-            string[] pattern = { "_ ", "_ ", "_ ", "- ", "` ", "` ", "' ", "´ ", "- ",  "_ ", "_ ", "_ " };
-            DateTime endTime = DateTime.Now.AddSeconds(3);
+            string[] pattern = { "_ ", "_ ", "_ ", "- ", "` ", "` ", "' ", "´ ", "- ", "_ ", "_ ", "_ " };
+            DateTime endTime = DateTime.Now.AddSeconds(_timeForSpinner);
 
             while (DateTime.Now < endTime)
             {
