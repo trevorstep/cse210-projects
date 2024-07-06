@@ -13,11 +13,11 @@ class Program
             {
                 // Call breathing actvity
                 Activity activity = new Activity();
-                activity.Displayspinner();
-
+                activity.DisplaySpinner();
             }
             else if (response == 2)
             {
+
 
             }
             else if (response == 3)
