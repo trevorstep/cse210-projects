@@ -27,7 +27,7 @@ class Activity
     }
     public void DisplayExitMessage(string typeOfActvity)
     {
-        Console.WriteLine($"Thank you for doing the {typeOfActvity} Actvity!");
+        Console.WriteLine($"Thank you for doing the {typeOfActvity} Actvity! You did this activity for {_time} seconds.");
     }
 
     public void GetDuration()
