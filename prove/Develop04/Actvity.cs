@@ -1,9 +1,7 @@
-using System.ComponentModel.DataAnnotations;
-
 class Activity
 {
     protected int _time = 3;
-    private int _timeForSpinner = 5;
+    protected int _timeForSpinner = 5;
 
 
 
@@ -40,10 +38,6 @@ class Activity
     public void ChangeConsoleColorBack()
     {
         Console.ResetColor();
-    }
-    public void StartTime()
-    {
-
     }
     public void DisplaySpinner()
     {
