@@ -42,7 +42,7 @@ class List: Activity
             Console.ReadLine();
             amountOfEntries = amountOfEntries ++;
         }
-    Console.Clear;
+    Console.Clear();
 
 
     }
