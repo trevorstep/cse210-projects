@@ -24,7 +24,6 @@ class Program
                 BreathingActivity.ChangeConsoleColorBack();
                 BreathingActivity.DisplayExitMessage("breathing");
                 BreathingActivity.DisplaySpinner();
-
             }
             else if (response == 2)
             {
@@ -40,12 +39,17 @@ class Program
                 reflectionActivity.RunActivity();
                 reflectionActivity.DisplayExitMessage("breathing");
                 reflectionActivity.DisplaySpinner();
-
-
             }
             else if (response == 3)
             {
-
+                List list = new List();
+                list.DisplayWelcomeMessage("Listing");
+                Console.WriteLine("");
+                list.GetDescription("This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
+                Console.WriteLine("");
+                list.GetDuration();
+                Console.Clear();
+                list.RunActivity();
             }
         }
     }
