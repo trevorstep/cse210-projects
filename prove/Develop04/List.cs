@@ -26,6 +26,7 @@ class List: Activity
     {
         string randomPrompt = GetRandomPrompt();
                 Console.WriteLine("Get ready...");
+                DisplaySpinner();
                         Console.WriteLine();
              Thread.Sleep(2000);
              Console.WriteLine("List as many responses to the following prompt: ");
@@ -33,16 +34,19 @@ class List: Activity
                      Console.WriteLine();
                      Console.Write($"You may begin in: ");
         CountDown();
-        Console.Clear();
+        Console.WriteLine();
          DateTime endTime = DateTime.Now.AddSeconds(_time);
 
         while (DateTime.Now < endTime)
     
         {
             Console.ReadLine();
-            amountOfEntries = amountOfEntries ++;
+            amountOfEntries = amountOfEntries + 1 ;
         }
-    Console.Clear();
+    Console.WriteLine($"You've listed {amountOfEntries} items.");
+    Console.WriteLine();
+    Console.WriteLine("Well Done!!!");
+
 
 
     }

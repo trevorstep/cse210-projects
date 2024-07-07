@@ -28,7 +28,7 @@ class Program
             else if (response == 2)
             {
                 Reflection reflectionActivity = new Reflection();
-                reflectionActivity.DisplayWelcomeMessage("reflection");
+                reflectionActivity.DisplayWelcomeMessage("Reflection");
                 Console.WriteLine("");
                 reflectionActivity.GetDescription("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
                 Console.WriteLine("");
@@ -37,7 +37,7 @@ class Program
                 Console.WriteLine("Get Ready...");
                 reflectionActivity.DisplaySpinner();
                 reflectionActivity.RunActivity();
-                reflectionActivity.DisplayExitMessage("breathing");
+                reflectionActivity.DisplayExitMessage("Breathing");
                 reflectionActivity.DisplaySpinner();
             }
             else if (response == 3)
@@ -50,6 +50,8 @@ class Program
                 list.GetDuration();
                 Console.Clear();
                 list.RunActivity();
+                list.DisplayExitMessage("Listing");
+                list.DisplaySpinner();
             }
         }
     }
