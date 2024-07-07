@@ -3,7 +3,8 @@ using System.ComponentModel.DataAnnotations;
 class Activity
 {
     protected int _time = 3;
-    private int _timeForSpinner = 4;
+    private int _timeForSpinner = 5;
+
 
 
     public void DisplayWelcomeMessage(string _typeOfActivity)
@@ -47,9 +48,6 @@ class Activity
     public void DisplaySpinner()
     {
         {
-            Console.WriteLine("Get ready...");
-            Console.WriteLine();
-
             string[] pattern = { "_ ", "_ ", "_ ", "- ", "` ", "` ", "' ", "´ ", "- ", "_ ", "_ ", "_ " };
             DateTime endTime = DateTime.Now.AddSeconds(_timeForSpinner);
 

@@ -103,3 +103,4 @@ class Breathing : Activity
         Console.WriteLine("Well Done!!!");
     }
 }
+// ChatGPT made some of the for loops since they are pretty simple, and I was feeling lazy and didnt want to type the same thing over and over again like 5 times.

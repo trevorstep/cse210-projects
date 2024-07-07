@@ -22,6 +22,7 @@ class Program
                 BreathingActivity.RunActivity();
                 BreathingActivity.ChangeConsoleColorBack();
                 BreathingActivity.DisplayExitMessage("breathing");
+                BreathingActivity.DisplaySpinner();
 
             }
             else if (response == 2)
