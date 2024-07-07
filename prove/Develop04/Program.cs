@@ -13,12 +13,13 @@ class Program
             {
                 // Call breathing actvity
                 Breathing BreathingActivity = new Breathing();
-                BreathingActivity.DisplayWelcomeMessage("Breathing");
+                BreathingActivity.DisplayWelcomeMessage("breathing");
                 Console.WriteLine("");
                 BreathingActivity.GetDescription("This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
                 Console.WriteLine("");
                 BreathingActivity.GetDuration();
                 BreathingActivity.DisplaySpinner();
+                BreathingActivity.RunActivity();
 
             }
             else if (response == 2)

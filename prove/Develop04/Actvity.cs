@@ -3,14 +3,12 @@ using System.ComponentModel.DataAnnotations;
 class Activity
 {
     private int _time = 3;
-    private int _timeForSpinner = 4;
-    private string _typeOfActvity = "";
-    private string _description = "";
+    protected int _timeForSpinner = 4;
 
 
-    public void DisplayWelcomeMessage(string _typeOfActvity)
+    public void DisplayWelcomeMessage(string _typeOfActivity)
     {
-        Console.WriteLine($"Welcome to the {_typeOfActvity} Actvity!");
+        Console.WriteLine($"Welcome to the {_typeOfActivity} Activity!");
     }
 
     public void GetDescription(string _description)
@@ -70,3 +68,4 @@ class Activity
 
     }
 }
+
