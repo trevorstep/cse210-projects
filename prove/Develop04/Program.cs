@@ -20,6 +20,7 @@ class Program
                 BreathingActivity.GetDuration();
                 BreathingActivity.DisplaySpinner();
                 BreathingActivity.RunActivity();
+                BreathingActivity.ChangeConsoleColorBack();
 
             }
             else if (response == 2)

@@ -2,8 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 class Activity
 {
-    private int _time = 3;
-    protected int _timeForSpinner = 4;
+    protected int _time = 3;
+    private int _timeForSpinner = 4;
 
 
     public void DisplayWelcomeMessage(string _typeOfActivity)
@@ -36,6 +36,10 @@ class Activity
         _time = int.Parse(Console.ReadLine());
     }
 
+    public void ChangeConsoleColorBack()
+    {
+        Console.ResetColor();
+    }
     public void StartTime()
     {
 
