@@ -13,7 +13,7 @@ class Breathing : Activity
 
         while (DateTime.Now < endTime)
         {
-
+            // ChatGPT Helped me with the foreach loop but I got the rest
             foreach (var symbol in pattern)
             {
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
