@@ -18,7 +18,6 @@ class Person
         return $"{_firstName}, {_lastName}, {_age}, {_weight}";
     }
 
-    Fireman fireman = new Fireman("EMT and Paramatic", "Betty", "Billy", 24, 210 );
 
 
 }
