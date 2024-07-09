@@ -1,4 +1,4 @@
-class Employee
+abstract class Employee
 {
     private string _name;
     private double _hoursWorked;
