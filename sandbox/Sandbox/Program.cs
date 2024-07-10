@@ -18,17 +18,18 @@ class Program
         Console.WriteLine($"{doctor.GetName()} is due {doctor.GetPay()}");
 
         List<Employee> employees = new List<Employee>();
-        employees.Add(employee);
         employees.Add(construcitonWorker);
         employees.Add(doctor);
 
         foreach (Employee e in employees)
         {
-            Console.WriteLine($"{e.GetName()} is due {e.GetPay()}");
+            Console.WriteLine($"{e.GetName()} is due {e.GetPay()} Insurance Cost: {e.InsuranceCost()}");
+            Console.WriteLine(e.ToString());
         }
 
 
-     public abstract double InsuranceCost();
+    }
+}
 
 
 

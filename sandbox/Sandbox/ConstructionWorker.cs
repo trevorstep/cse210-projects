@@ -7,4 +7,10 @@ class ConstrucitonWork: Employee
     {
        return base.GetPay() + 1000;
     }
+    public override double InsuranceCost()
+    {
+        return  _hoursWorked * _hourlyWage;
+    }
+
+    
 }
