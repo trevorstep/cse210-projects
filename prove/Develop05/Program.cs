@@ -8,6 +8,11 @@ class Program
         while (response != 4)
         {
             Menu menu = new Menu();
-            response = menu.DisplayMenu();
+            response = menu.DisplayMainMenu();
             if (response == 1)
-            {
+            { 
+
+            }
+        }
+    }
+}
