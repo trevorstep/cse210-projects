@@ -2,8 +2,8 @@ class Goal
 {
     private string _name;
     private string _description;
-    private int _numberOfPoints;
-    private bool _status;
+    private int _numberOfPoints = 0;
+    private bool _status = false;
 
     public Goal(string name, string description, int numberOfPoints, bool status)
     {
@@ -23,18 +23,20 @@ class Goal
         return _description;
     }
 
-    public void SetDescription()
+    public void SetDescription(string newDescription)
     {
-
+        _description = newDescription;
     }
+    // Chat GPT helped me with SetDescription
 
     public int GetPoints()
     {
         return _numberOfPoints;
     }
 
-    public int SetNumberOfPoints()
+    public int SetNumberOfPoints(int points)
     {
+        _numberOfPoints = points;
         return _numberOfPoints;
     }
 
@@ -43,9 +45,9 @@ class Goal
         return _status;
     }
 
-    public int MartkedComplete()
+    public void MartkedComplete()
     {
-        return _numberOfPoints;
+        _status = true;
     }
 
     virtual public string ListGoal()
