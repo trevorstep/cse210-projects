@@ -1,11 +1,11 @@
-class Goal
+public abstract class Goal
 {
     private string _name;
     private string _description;
-    private int _numberOfPoints = 0;
+    private string  _numberOfPoints;
     private bool _status = false;
 
-    public Goal(string name, string description, int numberOfPoints, bool status)
+    public Goal(string name, string description, string numberOfPoints, bool status)
     {
         _name = name;
         _description = description;
@@ -29,12 +29,12 @@ class Goal
     }
     // Chat GPT helped me with SetDescription
 
-    public int GetPoints()
+    public void GetPoints()
     {
-        return _numberOfPoints;
+        Console.WriteLine ($"You have {_numberOfPoints} points.");
     }
 
-    public int SetNumberOfPoints(int points)
+    public string SetNumberOfPoints( string points)
     {
         _numberOfPoints = points;
         return _numberOfPoints;
@@ -45,19 +45,20 @@ class Goal
         return _status;
     }
 
-    public void MartkedComplete()
+    public void MarkedComplete()
     {
         _status = true;
     }
 
     virtual public string ListGoal()
     {
-        return _name;
+
+        return $"{_name}: {_description} - Points: {_numberOfPoints} - Status: {(_status ? "Complete" : "Incomplete")}";
     }
 
     public override string ToString()
     {
-        return base.ToString();
+        return $"Goal(Name: {_name}, Description: {_description}, Points: {_numberOfPoints}, Status: {_status})";
     }
 
     // abstract string GetGoalType()

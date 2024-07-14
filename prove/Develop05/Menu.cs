@@ -32,8 +32,8 @@ class Menu
     }
     public int DisplaySubMenu()
     {
-    response = 0;
-    
+        response = 0;
+
         while (response < 1 || response > 4)
         {
             Console.Clear();
@@ -55,4 +55,6 @@ class Menu
         }
         return response;
     }
+
 }
+
