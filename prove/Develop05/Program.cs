@@ -6,6 +6,7 @@ class Program
 
     static void Main(string[] args)
     {
+        Goals goals = new Goals();
         int response = 0;
         while (response != 6)
         {
@@ -13,20 +14,35 @@ class Program
             response = menu.DisplayMainMenu();
             if (response == 1)
             {
-
-                menu.DisplaySubMenu();
+                response = menu.DisplaySubMenu();
+                Goal goal;
                 if (response == 1)
                 {
-                    Goals goals = new Goals();
-                    goals.AddGoal(new SimpleGoal("Somthing", "simple goal", "16", false));
-
+                    goal = new SimpleGoal();
+                    Console.WriteLine("Creating new Simple Goal");
+                    
 
                 }
+                else if (response == 2)
+                {
+                    goal = new EternalGoal();
+                    Console.WriteLine("Creating new Eternal Goal");
+                    
+
+                }
+                else
+                {
+                    goal = new ChecklistGoal();
+                    Console.WriteLine("Creating new Checklist Goal");
+                    
+
+                }
+                goal.Create();
+                goals.AddGoal(goal);
 
             }
             else if (response == 2)
             {
-                Goals goals = new Goals();
                 goals.DisplayGoals();
             }
         }

@@ -1,3 +1,4 @@
-// class EternalGoal: Goal
-// {
-// }
+class EternalGoal: Goal
+{
+    
+}
