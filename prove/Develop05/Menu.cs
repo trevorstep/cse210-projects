@@ -2,13 +2,16 @@ using System.Security.Cryptography.X509Certificates;
 
 class Menu
 {
-    int response = 0;
+    public int response = 0;
+    public int PointValue = 0;
     public int DisplayMainMenu()
     {
 
         while (response < 1 || response > 6)
         {
             Console.Clear();
+            Console.WriteLine($"You have {PointValue} points.");
+            Console.WriteLine();
             Console.WriteLine("Menu options");
             Console.WriteLine("1. Create New Goal");
             Console.WriteLine("2. List Goals");
