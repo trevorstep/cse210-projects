@@ -3,6 +3,9 @@ public abstract class Goal
     private string _name;
     private string _description;
     private int  _numberOfPoints;
+
+    protected int _CompletedCount = 0;
+
     private bool _status = false;
 
 public Goal ()
@@ -80,6 +83,13 @@ public Goal ()
     {
         return $"Goal(Name: {_name}, Description: {_description}, Points: {_numberOfPoints}, Status: {_status})";
     }
+
+
+        public void UpdatedCompletedCount()
+    {
+        _CompletedCount = _CompletedCount +1;
+    }
+
 
     // abstract string GetGoalType()
     // {

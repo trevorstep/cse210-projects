@@ -1,7 +1,6 @@
 class ChecklistGoal : Goal
 {
     private int _DesiredCount;
-    private int _CompletedCount = 0;
 
     public ChecklistGoal()
     {
@@ -15,9 +14,12 @@ class ChecklistGoal : Goal
         _DesiredCount = Int32.Parse(Console.ReadLine());
     }
 
+
     public override string ListGoal()
     {
         string value = base.ListGoal();
         return value + $" {_CompletedCount}/{_DesiredCount}";
     }
+
+    // Updates count if User calls it.
 }
