@@ -37,11 +37,17 @@ public Goal ()
         return _description;
     }
 
-    public void SetDescription(string newDescription)
+    public string Checkbox()
     {
-        _description = newDescription;
+        if (_status == true)
+        {
+            return "[✓]";
+        }
+        else 
+        {
+            return "[ ]";
+        }
     }
-    // Chat GPT helped me with SetDescription
 
     public void GetPoints()
     {
@@ -67,7 +73,7 @@ public Goal ()
     virtual public string ListGoal()
     {
 
-        return $"{_name}: {_description} - Points: {_numberOfPoints} - Status: {(_status ? "Complete" : "Incomplete")}";
+        return $"{Checkbox()} {_name}: {_description} - Points: {_numberOfPoints} - Status: {(_status ? "Complete" : "Incomplete")}";
     }
 
     public override string ToString()
