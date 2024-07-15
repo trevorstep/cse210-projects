@@ -91,18 +91,4 @@ public Goal ()
     }
 
 
-    // abstract string GetGoalType()
-    // {
-    //     return _name;
-    // }
-    // abstract int RecordEvent()
-    // {
-    //     return _numberOfPoints;
-    // }
-
-
-    // abstract void RunGoal()
-    // {
-
-    // }
 }

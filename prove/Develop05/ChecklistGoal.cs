@@ -21,5 +21,4 @@ class ChecklistGoal : Goal
         return value + $" {_CompletedCount}/{_DesiredCount}";
     }
 
-    // Updates count if User calls it.
 }

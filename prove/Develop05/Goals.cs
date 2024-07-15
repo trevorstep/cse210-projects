@@ -46,7 +46,6 @@ class Goals
                 string description = parts[1];
                 string points = parts[2];
                 bool status = bool.Parse(parts[3]);
-                listOfGoals.Add(new SimpleGoal()); // assuming all goals are Simple for simplicity
             }
             Console.WriteLine("Goals loaded successfully.");
         }

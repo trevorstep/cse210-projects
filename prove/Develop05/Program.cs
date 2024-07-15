@@ -46,6 +46,21 @@ class Program
             {
                 goals.DisplayGoals();
             }
+
+                        else if (response == 3)
+            {
+                goals.SaveGoals();
+            }
+
+                        else if (response == 4)
+            {
+                goals.LoadGoals();
+            }
+
+                        else if (response == 5)
+            {
+                goals.RecordEvent();
+            }
         }
     }
 }
