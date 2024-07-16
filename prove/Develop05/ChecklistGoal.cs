@@ -2,6 +2,10 @@ class ChecklistGoal : Goal
 {
     private int _DesiredCount;
 
+    private int _CompletedCount = 0;
+
+    private int _BonusPoints;
+
     public ChecklistGoal()
     {
 
@@ -20,5 +24,14 @@ class ChecklistGoal : Goal
         string value = base.ListGoal();
         return value + $" {_CompletedCount}/{_DesiredCount}";
     }
-
+    public override int RecordEvent()
+    {
+        _CompletedCount++;
+        if (_DesiredCount == _CompletedCount)
+        {
+            MarkedComplete();
+            return GetPoints() + _BonusPoints;
+        }
+        return GetPoints();
+    }
 }

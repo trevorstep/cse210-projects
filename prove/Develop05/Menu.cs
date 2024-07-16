@@ -2,16 +2,13 @@ using System.Security.Cryptography.X509Certificates;
 
 class Menu
 {
-    public int response = 0;
-    public int PointValue = 0;
     public int DisplayMainMenu()
     {
+        int response = 0;
 
         while (response < 1 || response > 6)
         {
-            Console.Clear();
-            Console.WriteLine($"You have {PointValue} points.");
-            Console.WriteLine();
+            // Console.Clear();
             Console.WriteLine("Menu options");
             Console.WriteLine("1. Create New Goal");
             Console.WriteLine("2. List Goals");
@@ -27,7 +24,7 @@ class Menu
             }
             catch
             {
-                Console.WriteLine("That is an invalid response, please enter a number between 1 and 4.");
+                Console.WriteLine("That is an invalid response, please enter a number between 1 and 6.");
                 Thread.Sleep(3000);
             }
         }
@@ -35,6 +32,8 @@ class Menu
     }
     public int DisplaySubMenu()
     {
+        int response = 0;
+
         response = 0;
 
         while (response < 1 || response > 4)

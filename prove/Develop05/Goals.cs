@@ -1,12 +1,20 @@
 // ChatGPT helped me write this class, most, if not all of the code was preprovided by me, however it was really scrambled and everywhere so GPT helped me make senese of it.
 class Goals
 {
+    private int _TotalScore;
     private List<Goal> listOfGoals = new List<Goal>();
 
     public void AddGoal(Goal goal)
     {
         listOfGoals.Add(goal);
     }
+
+    public void DisplayPoints ()
+    {
+        Console.WriteLine ($"You have {_TotalScore} points.");
+
+    }
+
 
     public void DisplayGoals()
     {
@@ -67,7 +75,7 @@ class Goals
         int response = int.Parse(Console.ReadLine()) - 1;
         if (response >= 0 && response < listOfGoals.Count)
         {
-            listOfGoals[response].MarkedComplete();
+            _TotalScore += listOfGoals[response].RecordEvent();
             Console.WriteLine("Goal marked as complete.");
         }
         else

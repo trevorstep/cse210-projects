@@ -4,8 +4,6 @@ public abstract class Goal
     private string _description;
     private int _numberOfPoints;
 
-    protected int _CompletedCount = 0;
-
     private bool _status = false;
 
     public Goal()
@@ -52,9 +50,9 @@ public abstract class Goal
         }
     }
 
-    public void GetPoints()
+    public int GetPoints()
     {
-        Console.WriteLine($"You have {_numberOfPoints} points.");
+        return _numberOfPoints;
     }
 
     public int SetNumberOfPoints(int points)
@@ -83,12 +81,7 @@ public abstract class Goal
     {
         return $"Goal(Name: {_name}, Description: {_description}, Points: {_numberOfPoints}, Status: {_status})";
     }
-
-
-    public void UpdatedCompletedCount()
-    {
-        _CompletedCount = _CompletedCount + 1;
-    }
-
+    public abstract int RecordEvent();
+    
 
 }

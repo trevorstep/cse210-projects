@@ -1,9 +1,13 @@
-class SimpleGoal: Goal
+class SimpleGoal : Goal
 {
-public SimpleGoal()
-{
-    
+    public SimpleGoal()
+    {
 
-}
 
+    }
+    public override int RecordEvent()
+    {
+        MarkedComplete();
+        return GetPoints();
+    }
 }
