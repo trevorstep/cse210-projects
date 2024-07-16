@@ -2,16 +2,16 @@ public abstract class Goal
 {
     private string _name;
     private string _description;
-    private int  _numberOfPoints;
+    private int _numberOfPoints;
 
     protected int _CompletedCount = 0;
 
     private bool _status = false;
 
-public Goal ()
-{
+    public Goal()
+    {
 
-}
+    }
     public Goal(string name, string description, int numberOfPoints, bool status)
     {
         _name = name;
@@ -22,11 +22,11 @@ public Goal ()
 
     public virtual void Create()
     {
-        Console.WriteLine ("What is the name of this goal? ");
-         _name = Console.ReadLine();
-        Console.WriteLine ("What is the description of this goal? ");
+        Console.WriteLine("What is the name of this goal? ");
+        _name = Console.ReadLine();
+        Console.WriteLine("What is the description of this goal? ");
         _description = Console.ReadLine();
-        Console.WriteLine ("How many points is your goal worth? ");
+        Console.WriteLine("How many points is your goal worth? ");
         _numberOfPoints = Int32.Parse(Console.ReadLine());
     }
 
@@ -46,7 +46,7 @@ public Goal ()
         {
             return "[✓]";
         }
-        else 
+        else
         {
             return "[ ]";
         }
@@ -54,10 +54,10 @@ public Goal ()
 
     public void GetPoints()
     {
-        Console.WriteLine ($"You have {_numberOfPoints} points.");
+        Console.WriteLine($"You have {_numberOfPoints} points.");
     }
 
-    public int SetNumberOfPoints( int points)
+    public int SetNumberOfPoints(int points)
     {
         _numberOfPoints = points;
         return _numberOfPoints;
@@ -85,9 +85,9 @@ public Goal ()
     }
 
 
-        public void UpdatedCompletedCount()
+    public void UpdatedCompletedCount()
     {
-        _CompletedCount = _CompletedCount +1;
+        _CompletedCount = _CompletedCount + 1;
     }
 
 
