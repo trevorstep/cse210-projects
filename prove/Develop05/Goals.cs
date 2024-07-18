@@ -31,6 +31,7 @@ class Goals
         string filename = ObtainFileName("Enter the filename to save the goal: ");
         using (StreamWriter writer = new StreamWriter(filename))
         {
+            writer.WriteLine($"Score#{_TotalScore}");
             foreach (Goal goal in listOfGoals)
             {
                 writer.WriteLine(goal.ToString());
@@ -51,7 +52,12 @@ class Goals
             {
                 string[] parts = line.Split('#');
                 string goalType = parts[0];
-                if (goalType == "SimpleGoal")
+                if (goalType == "Score")
+                {
+                    _TotalScore = int.Parse(parts[1]);
+
+                }
+                else if (goalType == "SimpleGoal")
                 {
                     string name = parts[1];
                     string description = parts[2];
@@ -67,17 +73,21 @@ class Goals
                     string description = parts[2];
                     int points = int.Parse(parts[3]);
                     bool status = bool.Parse(parts[4]);
-                    EternalGoal eternalGoal = new EternalGoal(name, description, points, status);
+                    int CompletedCountOfGoal = int.Parse(parts[5]);
+                    EternalGoal eternalGoal = new EternalGoal(name, description, points, status,CompletedCountOfGoal);
                     listOfGoals.Add(eternalGoal);
 
                 }
-                else if (goalType == "ChecklistGol")
+                else if (goalType == "ChecklistGoal")
                 {
                     string name = parts[1];
                     string description = parts[2];
                     int points = int.Parse(parts[3]);
                     bool status = bool.Parse(parts[4]);
-                    ChecklistGoal checklistGoal = new ChecklistGoal(name, description, points, status);
+                    int BonusPoints = int. Parse(parts[5]);
+                    int CompletedCount = int.Parse(parts[6]);
+                    int DesiredCount = int.Parse(parts[7]);
+                    ChecklistGoal checklistGoal = new ChecklistGoal(name, description, points, status, BonusPoints,CompletedCount, DesiredCount);
                     listOfGoals.Add(checklistGoal);
 
                 }

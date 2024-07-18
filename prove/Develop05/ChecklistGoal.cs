@@ -6,9 +6,11 @@ class ChecklistGoal : Goal
 
     private int _BonusPoints;
 
-    public ChecklistGoal (string name, string description, int numberOfPoints, bool status) : base(name, description, numberOfPoints, status)
+    public ChecklistGoal(string name, string description, int numberOfPoints, bool status, int BonusPoints, int CompletedCount, int DesiredCount) : base(name, description, numberOfPoints, status)
     {
-        
+        _BonusPoints = BonusPoints;
+        _CompletedCount = CompletedCount;
+        _DesiredCount = DesiredCount;
     }
     public ChecklistGoal()
     {
@@ -20,6 +22,8 @@ class ChecklistGoal : Goal
         base.Create();
         Console.WriteLine("How many times do you want to accomplish this goal? ");
         _DesiredCount = Int32.Parse(Console.ReadLine());
+        Console.WriteLine($"How many bonus points would you like to recieve for comepleting this goal {_DesiredCount} times?");
+        _BonusPoints = Int32.Parse(Console.ReadLine());
     }
 
 
@@ -38,4 +42,10 @@ class ChecklistGoal : Goal
         }
         return GetPoints();
     }
+    public override string ToString()
+    {
+        return $"{base.ToString()}#{_BonusPoints}#{_CompletedCount}#{_DesiredCount}";
+    }
+
 }
+
