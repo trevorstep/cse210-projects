@@ -79,7 +79,7 @@ public abstract class Goal
 
     public override string ToString()
     {
-        return $"Goal(Name: {_name}, Description: {_description}, Points: {_numberOfPoints}, Status: {_status})";
+        return $"{base.ToString()}#{_name}#{_description}#{_numberOfPoints}#{_status}";
     }
     public abstract int RecordEvent();
     

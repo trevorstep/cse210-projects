@@ -9,9 +9,9 @@ class Goals
         listOfGoals.Add(goal);
     }
 
-    public void DisplayPoints ()
+    public void DisplayPoints()
     {
-        Console.WriteLine ($"You have {_TotalScore} points.");
+        Console.WriteLine($"You have {_TotalScore} points.");
 
     }
 
@@ -49,11 +49,38 @@ class Goals
             string[] lines = File.ReadAllLines(filename);
             foreach (string line in lines)
             {
-                string[] parts = line.Split(',');
-                string name = parts[0];
-                string description = parts[1];
-                string points = parts[2];
-                bool status = bool.Parse(parts[3]);
+                string[] parts = line.Split('#');
+                string goalType = parts[0];
+                if (goalType == "SimpleGoal")
+                {
+                    string name = parts[1];
+                    string description = parts[2];
+                    int points = int.Parse(parts[3]);
+                    bool status = bool.Parse(parts[4]);
+                    SimpleGoal simpleGaol = new SimpleGoal(name, description, points, status);
+                    listOfGoals.Add(simpleGaol);
+
+                }
+                else if (goalType == "EternalGoal")
+                {
+                    string name = parts[1];
+                    string description = parts[2];
+                    int points = int.Parse(parts[3]);
+                    bool status = bool.Parse(parts[4]);
+                    EternalGoal eternalGoal = new EternalGoal(name, description, points, status);
+                    listOfGoals.Add(eternalGoal);
+
+                }
+                else if (goalType == "ChecklistGol")
+                {
+                    string name = parts[1];
+                    string description = parts[2];
+                    int points = int.Parse(parts[3]);
+                    bool status = bool.Parse(parts[4]);
+                    ChecklistGoal checklistGoal = new ChecklistGoal(name, description, points, status);
+                    listOfGoals.Add(checklistGoal);
+
+                }
             }
             Console.WriteLine("Goals loaded successfully.");
         }

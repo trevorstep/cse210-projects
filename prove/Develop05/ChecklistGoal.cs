@@ -6,6 +6,10 @@ class ChecklistGoal : Goal
 
     private int _BonusPoints;
 
+    public ChecklistGoal (string name, string description, int numberOfPoints, bool status) : base(name, description, numberOfPoints, status)
+    {
+        
+    }
     public ChecklistGoal()
     {
 
