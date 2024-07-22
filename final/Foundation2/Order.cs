@@ -30,24 +30,25 @@ public class Order
         set { _customer = value; }
     }
 
- public double CalculateTotalCost()
-{
-    double productPartTotal = _products.Sum(p => p.costOfGoods * p.quantity);
-    double productTotal;
-
-    if (_customer.LivesInUSA())
+    public double CalculateTotalCost()
     {
-        productTotal = productPartTotal + DomesticShippingCost;
+        double productPartTotal = _products.Sum(p => p.costOfGoods * p.quantity);
+        double productTotal;
+
+        if (_customer.LivesInUSA())
+        {
+            productTotal = productPartTotal + DomesticShippingCost;
+        }
+        else
+        {
+            productTotal = productPartTotal + InternationalShippingCost;
+        }
+
+        return productTotal;
     }
-    else
-    {
-        productTotal = productPartTotal + InternationalShippingCost;
-    }
-    return productTotal;
-}
 
 
-// Chat gpt helped me here^v
+    // Chat gpt helped me here^v
     public string GeneratePackingLabel()
     {
         var label = "Packing Label:\n";
