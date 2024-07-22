@@ -1,4 +1,4 @@
-class Product
+public class Product
 {
     private string _name;
     private int _productID;
@@ -30,10 +30,10 @@ class Product
         get { return _quantity; }
     }
 
-    public double TotalCost(double _costOfGoods, int _quantity)
+    public double TotalCost()
     {
-        double TotalCost= _costOfGoods * _quantity;
-        return TotalCost;
+        return _costOfGoods * _quantity;
     }
+
 
 }

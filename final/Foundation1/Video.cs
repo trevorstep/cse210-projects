@@ -26,15 +26,17 @@ class Video
         get { return _videoLengthInSeconds; }
     }
 
-#region 
-// Chat GPT helped me with these since I couldnt figure out how to access my data types.
-    public void AddComment(Comment comment){
+    #region 
+    // Chat GPT helped me with these since I couldnt figure out how to access my data types.
+    public void AddComment(Comment comment)
+    {
         _comments.Add(comment);
     }
-    public List<Comment> GetComments(){
+    public List<Comment> GetComments()
+    {
         return new List<Comment>(_comments);
     }
-#endregion
+    #endregion
 
     public int GetNumberOfComments()
     {
