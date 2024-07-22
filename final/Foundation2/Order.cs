@@ -47,6 +47,7 @@ public class Order
 }
 
 
+// Chat gpt helped me here^v
     public string GeneratePackingLabel()
     {
         var label = "Packing Label:\n";
