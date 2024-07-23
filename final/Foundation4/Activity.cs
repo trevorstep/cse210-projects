@@ -11,7 +11,6 @@ public abstract class Activity
 
     public Activity()
     {
-
     }
 
     public abstract double GetDistance();
